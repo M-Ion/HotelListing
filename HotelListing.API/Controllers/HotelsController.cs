@@ -32,7 +32,7 @@ public class HotelsController : ControllerBase
     [HttpGet("{id}")]
     public async Task<ActionResult<HotelDto>> GetHotel(int id)
     {
-        var hotel = await _hotelsRepository.GetDetails(id);
+        var hotel = await _hotelsRepository.GetAsync(id);
 
         if (hotel == null) return NotFound();
 
