@@ -87,7 +87,7 @@ public class AuthManager : IAuthManager
             {
                 Token = token,
                 UserId = _user.Id,
-                RefreshToken = _refreshToken,
+                RefreshToken = await CreateRefreshToken(),
             };
         }
 
